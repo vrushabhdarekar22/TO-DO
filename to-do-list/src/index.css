@@ -26,9 +26,11 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  place-items: top;
   min-width: 320px;
   min-height: 100vh;
+  width: 100%; /* Full width without overflow */
+  overflow-x: hidden; /* Blocks horizontal scroll */
 }
 
 h1 {
@@ -66,4 +68,23 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.logSign{
+  position:absolute;
+  right:200px;
+}
+
+.navb{
+  position:absolute;
+  /* right:1px; */
+  left:800px;
+  width:100vw;
+  /* display:block; */
+  /* left:0; */
+  
+}
+
+.ha{
+ 
 }
