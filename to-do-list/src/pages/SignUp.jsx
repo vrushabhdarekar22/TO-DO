@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import  {FcGoogle} from 'react-icons/fc'
+import toast from 'react-hot-toast';
 
 function SignUp() {
 
@@ -20,7 +21,7 @@ function SignUp() {
      const handleSubmit = (event) => {
        event.preventDefault();
        // go to home page
-       console.log("Form submitted:", formData);
+       toast.success("Account created Successfully")
        // Add your navigation or authentication logic here
      };
    
@@ -93,7 +94,7 @@ function SignUp() {
            </form>
            
            <p className="mt-8 text-xs text-center text-gray-500">
-             By continuing with Google or Email, you agree to Todoist's 
+             By continuing with Google or Email, you agree to our 
              <a href="#" className="text-blue-600 hover:text-blue-800"> Terms of Service </a> 
              and 
              <a href="#" className="text-blue-600 hover:text-blue-800"> Privacy Policy</a>.

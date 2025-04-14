@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import SignUp from './pages/SignUp'
 import NotFound from './pages/NotFound'
 import Login from './pages/Login'
+import Main from './pages/Main'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ function App() {
         <Route path='/' element={<Home/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/signup' element={<SignUp/>}></Route>
+        <Route path='/main' element={<Main/>}></Route>
         <Route path='*' element={<NotFound/>}></Route>
       </Routes>
     </div>

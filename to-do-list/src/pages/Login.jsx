@@ -1,12 +1,18 @@
 import React from 'react';
 import { useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
+import {Link} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
+import Main from './Main';
 
 function Login() {
   const [formData, setFormData] = useState({
     email: "",
     password: ""
   });
+
+  const navigate = useNavigate()
 
   const changeHandler = (event) => {
     setFormData((prevData) => ({
@@ -18,7 +24,8 @@ function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // go to home page
-    console.log("Form submitted:", formData);
+    toast.success("LoggedIn Successfully")
+    navigate('/main')
     // Add your navigation or authentication logic here
   };
 
@@ -100,7 +107,7 @@ function Login() {
         <div className="mt-6 text-center">
           <p className="text-sm text-gray-600">
             Don't have an account? 
-            <a href="#" className="ml-1 text-blue-600 hover:text-blue-800 font-medium">Sign up</a>
+            <Link to='/signup' className="ml-1 text-blue-600 hover:text-blue-800 font-medium">Sign up</Link>
           </p>
         </div>
       </div>
